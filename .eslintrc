@@ -1,0 +1,20 @@
+{
+    "env": {},
+    "extends": "airbnb/base",
+    "rules": {
+        "indent": 0,
+        "no-var": 0,
+        "func-names": 0,
+        "prefer-arrow-callback": 0,
+        "space-before-function-paren": 0,
+        "prefer-template": 0,
+        "vars-on-top": 0,
+        "comma-dangle": [2, "never"],
+        "spaced-comment": 0,
+        "no-use-before-define": [2, {
+            "functions": false
+        }],
+        "no-console": 0,
+        "quotes": [2, "double"]
+    }
+}

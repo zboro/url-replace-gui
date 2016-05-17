@@ -1,0 +1,14 @@
+{
+  "name": "url-replace-gui",
+  "version": "0.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^0.4.1",
+    "url-replace": "0.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.5.1",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^5.0.1"
+  }
+}
