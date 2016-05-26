@@ -2,7 +2,7 @@
 
 const app = require("app");// Module to control application life.
 const tray = require("./lib/tray");
-
+const proxyUtils = require("./lib/proxyUtils");
 
 // Keep a global reference of the window object, if you don"t, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -17,10 +17,6 @@ app.on("window-all-closed", function() {
 // initialization and is ready to create browser windows.
 app.on("ready", function() {
 	console.log("app ready");
-	// var config = readConfig();
-	// if (!config) {
-	// 	console.error("Failed to load config file (~/.proxyrc.json).");
-	// 	process.exit(1);
-	// }
 	tray.init(app);
+	proxyUtils.startProxy();
 });
