@@ -1,6 +1,6 @@
 // const BrowserWindow = electron.BrowserWindow;// Module to create native browser window.
 
-const app = require("app");// Module to control application life.
+const app = require("electron").app;// Module to control application life.
 const tray = require("./lib/tray");
 const proxyUtils = require("./lib/proxyUtils");
 
