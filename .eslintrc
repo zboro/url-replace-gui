@@ -1,6 +1,8 @@
 {
+    "parserOptions": {
+        "ecmaVersion": 6,
+    },
     "env": {},
-    "extends": "airbnb/base",
     "rules": {
         "indent": 0,
         "no-var": 0,
