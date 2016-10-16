@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import {readFileSync} from "fs";
+import {readFileSync, writeFileSync} from "fs";
 import * as path from "path";
 
 
@@ -9,12 +9,19 @@ import * as path from "path";
 })
 export class RawEditorComponent implements OnInit {
 
-	configJson : String
+    configJson: string;
 
-	ngOnInit() {
-		console.log("sadasd");
-		console.log(readFileSync);
-		this.configJson = readFileSync(path.join(process.env.HOME, ".proxyrc.json"), "utf-8");
-	}
+    private configPath: string = path.join(process.env.HOME, ".proxyrc.json");
 
+    ngOnInit() {
+        this.reloadConfig();
+    }
+
+    reloadConfig() {
+        this.configJson = readFileSync(this.configPath, "utf-8");
+    }
+
+    saveConfig() {
+        writeFileSync(this.configPath, this.configJson, "utf-8");
+    }
 }

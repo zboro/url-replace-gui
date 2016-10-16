@@ -19,4 +19,7 @@ app.on("ready", function() {
 	console.log("app ready");
 	tray.init(app);
 	proxyUtils.startProxy();
+	proxyUtils.watchConfig(() => {
+		tray.init(app);
+	})
 });

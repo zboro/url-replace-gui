@@ -1,8 +1,26 @@
-html, body {
-	height: 100%;
+html,
+body,
+my-app {
+    height: 100%;
+    width: 100%;
 }
-body {
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
+
+my-app {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+	padding: 5px;
+}
+
+raw-editor,
+raw-editor>form,
+.editorTextareaWrapper {
+	flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.editorTextarea {
+    flex: 1;
 }

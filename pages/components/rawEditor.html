@@ -1,9 +1,9 @@
-<form class="form-horizontal" style="height:100%;display:flex;flex-direction:column;">
-	<div class="form-group">
-		<textarea class="form-control" name="configJson">{{configJson}}</textarea>
+<form class="form-horizontal">
+	<div class="form-group editorTextareaWrapper">
+		<textarea class="form-control editorTextarea" name="configJson"  [(ngModel)]="configJson"></textarea>
 	</div>
 	<div class="form-group" style="text-align:right">
-		<button class="btn">Reload</button>
-		<button class="btn btn-primary">Save</button>
+		<button class="btn" (click)="reloadConfig()">Reload</button>
+		<button class="btn btn-primary" (click)="saveConfig()">Save</button>
 	</div>
 </form>
